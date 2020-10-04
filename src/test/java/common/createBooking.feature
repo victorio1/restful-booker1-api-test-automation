@@ -25,4 +25,3 @@ Feature: Create Booking
       """
       When method POST
       Then status 200
-
