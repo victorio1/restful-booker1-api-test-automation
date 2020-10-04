@@ -8,6 +8,8 @@ Feature: Create Booking
 
     @HappyPath
     Scenario: Verificar que al enviar la peticion con username y password correctos reciba cod 200
+      * string schema = read('classpath:restfullbooker/createtoken/jsonschema/scenario1-schema.json')
+      * def SchemaUtils = Java.type('com.intuit.karate.restfullbooker.util.SchemaUtils')
       Given path '/auth'
       And request
       """
@@ -18,3 +20,4 @@ Feature: Create Booking
       """
       When method POST
       Then status 200
+      And assert SchemaUtils.isValid(response, schema)
