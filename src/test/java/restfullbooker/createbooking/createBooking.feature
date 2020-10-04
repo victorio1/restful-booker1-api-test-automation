@@ -9,6 +9,7 @@ Feature: Create Booking
 
     @HappyPath
     Scenario: Verificar petición correcta para crear una reserva reciba 200
+      * def data = read('classpath:restfullbooker/createbooking/data/data.json')
       Given path '/booking'
       And request
       """
@@ -26,4 +27,7 @@ Feature: Create Booking
       """
       When method POST
       Then status 200
+      * match response.booking.firstname contains data.victorino
+
+
 
