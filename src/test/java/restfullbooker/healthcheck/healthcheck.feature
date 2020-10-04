@@ -5,6 +5,7 @@ Feature: Health Check
   Background:
     * url baseUrl
 
+    @BeyondPath
     Scenario: Verificar petición correcta para consultar el estado del servicio reciba 201
       Given path '/ping'
       When method GET

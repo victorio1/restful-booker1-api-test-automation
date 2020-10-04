@@ -27,6 +27,5 @@ public class TestRunner {
         Configuration config = new Configuration(new File("target"), "RestFullBooker");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
-
     }
 }

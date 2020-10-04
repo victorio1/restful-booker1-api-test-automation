@@ -7,6 +7,7 @@ Feature: Update Booking
     * header Content-Type = 'application/json'
     * header Accept = 'application/json'
 
+    @BeyondPath
     Scenario: Verificar petición correcta para actualizar una reserva reciba 200
       * def createTokenResponse = call read('classpath:common/createToken.feature')
       * def accessToken =  createTokenResponse.response.token

@@ -6,6 +6,7 @@ Feature: Create Booking
     * url baseUrl
     * header Accept = 'application/json'
 
+    @HappyPath
     Scenario: Verificar que al enviar la peticion con username y password correctos reciba cod 200
       Given path '/auth'
       And request

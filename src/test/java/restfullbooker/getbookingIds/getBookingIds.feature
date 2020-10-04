@@ -5,6 +5,7 @@ Feature: Get Booking Ids
   Background:
     * url baseUrl
 
+    @BeyondPath
     Scenario: Validar que al realizar una peticion obtenga todos los Booking Ids
       Given path '/booking'
       When method GET

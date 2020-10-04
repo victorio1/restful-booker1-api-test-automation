@@ -6,6 +6,7 @@ Feature: Delete Booking
     * url baseUrl
     * header Content-Type = 'application/json'
 
+    @HappyPath
     Scenario: Verificar petición correcta para eliminar una reserva reciba 201
       * def createTokenResponse = call read('classpath:common/createToken.feature')
       * def createBookingResponse = call read('classpath:common/createBooking.feature')
